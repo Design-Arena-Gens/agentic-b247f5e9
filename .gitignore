@@ -29,9 +29,10 @@ lerna-debug.log*
 pnpm-debug.log*
 
 # Package manager lock files
-package-lock.json
-yarn.lock
-pnpm-lock.yaml
+# (Lock files are tracked for deterministic builds)
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
 .pnpm-store/
 
 # Runtime data
@@ -879,10 +880,11 @@ venv.bak/
 *.weights
 
 # Data files
-*.csv
-*.json
-*.xml
-*.parquet
+# (Keep sample data directories ignored but allow project configuration JSON files)
+# *.csv
+# *.json
+# *.xml
+# *.parquet
 data/
 datasets/
 
@@ -913,5 +915,9 @@ config/database.yml
 *.rar
 *.tar
 *.zip
+
+# Allow project static assets
+!public/
+!public/**
 
 # ===== END =====

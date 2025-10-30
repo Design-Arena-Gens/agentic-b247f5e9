@@ -1,0 +1,22 @@
+import type { Metadata } from "next";
+import { Outfit } from "next/font/google";
+import "./globals.css";
+
+const outfit = Outfit({ subsets: ["latin"], weight: ["300", "400", "600", "700"] });
+
+export const metadata: Metadata = {
+  title: "ForgeFit Gym",
+  description: "Bold, energetic gym logo branding created by AI.",
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html lang="en">
+      <body className={outfit.className}>{children}</body>
+    </html>
+  );
+}
